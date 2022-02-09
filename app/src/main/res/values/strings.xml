@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">FiveCalendar</string>
+    <string name="title_activity_tarea">TareaActivity</string>
+    <string name="horario">Horario</string>
+    <string name="abrir_calendario">Abrir Calendario</string>
+    <string name="anadir_tarea">Añadir Tarea</string>
+    <string name="ver_semana">Ver Semana</string>
+    <string name="fecha_de_la_tarea">Fecha de la Tarea</string>
+    <string name="titulo_de_la_tarea">Titulo de la Tarea</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="guardar_tarea">Guardar Tarea</string>
+    <string name="hora_inicio">Hora Inicio</string>
+    <string name="hora_fin">Hora Fin</string>
+
+    <string name="lun">Lunes</string>
+    <string name="mar">Martes</string>
+    <string name="mie">Miércoles</string>
+    <string name="jue">Jueves</string>
+    <string name="vie">Viernes</string>
+    <string name="sab">Sábado</string>
+    <string name="dom">Domingo</string>
+
+    <string name="texto_ayuda">¡Bienvenido a Five Calendar!\n\n
+    Esta aplicación te ayudará a organizar tus tareas de una manera fácil e intuitiva. Además, te permite añadir un horario para que tus tareas semanales, como las clases, se añadan automáticamente.\n\n
+    A continuación, se muestra una guía rápida de las opciones del menú principal:\n
+    \t- Abrir Calendario: Muestra un calendario donde puedes seleccionar un día para ver todas las tareas que tienes durante este.\n
+    \t- Ver Semana: Muestra un menú con las tareas de la semana actual.\n
+    \t- Añadir Tarea: Muestra un menú donde puedes crear una nueva tarea.\n
+    \t- Horario: Muestra un menú donde puedes introducir tu horario con tus tareas semanales.\n\n
+    Adelante, pulse Añadir Tarea para comenzar a anotar sus tareas. También puede realizar esta acción pulsando Abrir Calendario, escogiendo un día y pulsando el botón + presente en la lista de tareas de ese día.
+    </string>
+
+
+    <string name="guion">-</string>
+    <string name="no_tienes_horario">No tienes horario</string>
+    <string name="crear_horario">Crear Horario</string>
+    <string name="t_tulo_de_la_clase">Título de la Clase</string>
+    <string name="d_a_de_la_semana">Día de la semana:</string>
+
+
+    <string-array name="day_array">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+
+</resources>

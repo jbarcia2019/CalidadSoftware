@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context=".NewTareaActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarClase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Clase"
+        tools:layout_editor_absoluteX="1dp"/>
+
+    <EditText
+        android:id="@+id/editTextNameClase"
+        android:layout_width="332dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        android:textColor="@color/white"
+        android:ems="10"
+        android:hint="@string/t_tulo_de_la_clase"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarClase" />
+
+    <EditText
+        android:id="@+id/editTextDescripcionClase"
+        android:layout_width="342dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/descripci_n"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameClase"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvDiaSemana"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/d_a_de_la_semana"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescripcionClase" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/diaSemanaSpinnerClase"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        android:popupBackground="?attr/background"
+        app:layout_constraintStart_toEndOf="@+id/tvDiaSemana"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescripcionClase"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/tvHoraInicio"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/hora_inicio"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDiaSemana" />
+
+    <TextView
+        android:id="@+id/editTextHoraInicioClase"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="time"
+        android:minHeight="48dp"
+        android:onClick="abrirHoraInicio"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintStart_toEndOf="@+id/tvHoraInicio"
+        app:layout_constraintTop_toBottomOf="@+id/diaSemanaSpinnerClase"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+        android:id="@+id/tvHoraFin"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/hora_fin"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHoraInicio" />
+
+    <TextView
+        android:id="@+id/editTextHoraFinClase"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="time"
+        android:minHeight="48dp"
+        android:onClick="abrirHoraFin"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:theme="@style/Theme.FiveCalendar.EditText"
+        app:layout_constraintStart_toEndOf="@+id/tvHoraFin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHoraInicioClase"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonClaseSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="guardarClase"
+        app:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="?attr/colorAccent"
+        app:srcCompat="@drawable/ic_input_extract_action_done"
+        tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonClaseBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        app:backgroundTint="?attr/colorPrimary"
+        app:rippleColor="?attr/colorAccent"
+        android:onClick="back"
+        android:tint="@color/white"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="VectorDrawableCompat" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonClaseDelete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonClaseBack"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonClaseSave"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        app:tint="@color/black"
+        app:backgroundTint="@color/red"
+        app:rippleColor="@color/white"
+        android:onClick="eliminarClase"
+        app:srcCompat="@drawable/ic_menu_delete"
+        tools:ignore="VectorDrawableCompat" />
+
+    <!--<Button
+        android:id="@+id/button7"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/guardar_tarea"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTime"
+        app:layout_constraintVertical_bias="0.178" />-->
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    tools:context=".SemanaActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarSemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Tareas de la semana"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/Lunes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="verLunes"
+        android:text="@string/lun"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSemana"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/Martes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verMartes"
+        android:text="@string/mar"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lunes" />
+
+    <Button
+        android:id="@+id/Miercoles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verMiercoles"
+        android:text="@string/mie"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Martes" />
+
+    <Button
+        android:id="@+id/Jueves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verJueves"
+        android:text="@string/jue"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Miercoles" />
+
+    <Button
+        android:id="@+id/Viernes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verViernes"
+        android:text="@string/vie"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Jueves" />
+
+    <Button
+        android:id="@+id/Sabado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verSabado"
+        android:text="@string/sab"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Viernes" />
+
+    <Button
+        android:id="@+id/Domingo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="verDomingo"
+        android:text="@string/dom"
+        android:textAllCaps="true"
+        android:theme="@style/Theme.FiveCalendar.Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sabado" />
+
+</android.support.constraint.ConstraintLayout>
