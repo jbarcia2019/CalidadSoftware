@@ -20,11 +20,11 @@ jobs:
       name: android/android-machine
      
     build:
-    docker:
-      - image: 'circleci/openjdk:11-jdk'
-    steps:
-      - checkout
-      - run:
+      docker:
+        - image: 'circleci/openjdk:11-jdk'
+      steps:
+        - checkout
+        - run:
           name: Analyze on SonarCloud
           command: gradle build sonarqube"
 
