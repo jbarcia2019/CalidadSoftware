@@ -1,6 +1,7 @@
 package com.example.fivecalendar;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 public class Tarea extends Evento {
@@ -34,7 +35,6 @@ public class Tarea extends Evento {
 	}
 
 
-
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -42,6 +42,13 @@ public class Tarea extends Evento {
 		if (!super.equals(o)) return false;
 		Tarea tarea = (Tarea) o;
 		return fecha.equals(tarea.fecha);
+	}
+
+	public long getCountDown(){
+		Date dateNow = new Date();
+		long diff =  (fecha.getTime().getTime() + getHoraInicio().getTime().getTime())- dateNow.getTime();
+		long diffSec = diff / 1000;
+		return diffSec;
 	}
 
 }
