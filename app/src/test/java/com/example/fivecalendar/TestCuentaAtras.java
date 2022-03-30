@@ -38,7 +38,6 @@ public class TestCuentaAtras {
                 calendarFinal
         );
 
-        ///1648677599 es un dia en día
         assertEquals(sol.getCountDown(), 1648677599);
     }
 }
