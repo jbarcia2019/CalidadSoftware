@@ -12,6 +12,7 @@ import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 public class TestCuentaAtras {
     @Test
@@ -25,7 +26,6 @@ public class TestCuentaAtras {
         Calendar calendarHoraInicio = Calendar.getInstance();
         calendarHoraInicio.setTime(calendarInitial.getTime());
 
-
         Calendar calendarFinal = Calendar.getInstance();
         calendarFinal.add(Calendar.MONTH, +1);
         calendarFinal.add(Calendar.HOUR_OF_DAY, +1);
@@ -38,6 +38,9 @@ public class TestCuentaAtras {
                 calendarFinal
         );
 
-        assertEquals(sol.getCountDown(), 1648677599);
+        long expectedDays = TimeUnit.DAYS.toMillis(1);
+        long expectedSeconds = expectedDays / 1000;
+
+        assertEquals(sol.getCountDown(), expectedSeconds);
     }
 }
