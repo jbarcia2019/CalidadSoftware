@@ -46,8 +46,24 @@ public class Tarea extends Evento {
 
 	public long getCountDown(){
 		Date dateNow = new Date();
-		long diff =  (fecha.getTime().getTime() + getHoraInicio().getTime().getTime())- dateNow.getTime();
-		long diffSec = diff / 1000;
+		Calendar calendar = Calendar.getInstance();
+		Horario.updateFecha(calendar);
+
+		Date dateRestar = calendar.getTime();
+
+		long longFecha = fecha.getTime().getTime();
+		long longFechaSec = longFecha / 1000;
+
+		long longHora = getHoraInicio().getTime().getTime();
+		long longHoraSec = longHora / 1000;
+
+		long longRestar = dateRestar.getTime();
+		long longRestarSec = longRestar / 1000;
+
+		long longNow = dateNow.getTime();
+		long longNowSec = longNow / 1000;
+
+		long diffSec =  (longFechaSec + (longHoraSec - longRestarSec))- longNowSec;
 		return diffSec;
 	}
 
